@@ -49,7 +49,9 @@ ownerRouter.post("/signup", async (req, res) => {
       res.status(201).json({
           "token": token,
           "society_key":newSociety._id
-    });
+      });
+    console.log(newOwner._id);
+    console.log(newSociety._id);
   }
   catch (error) {
       console.log(error);
@@ -82,7 +84,6 @@ ownerRouter.post("/signin", async (req, res) => {
   }
 });
 
-
 ownerRouter.get("/getIssues", extractOwnerAndSocietyIds, async (req, res) => {
   try {
     const owner = await Owner.findById(req.ownerId);
@@ -91,24 +92,36 @@ ownerRouter.get("/getIssues", extractOwnerAndSocietyIds, async (req, res) => {
       return res.status(404).json({ error: "Owner not found" });
     }
 
-    // Get the societyId from the request
-      const societyId = req.societyId;
-      
+    const societyId = req.societyId;
 
-    // Find the society using societyId
-      const society = await Society.findById(societyId);
-      console.log(society.complaint);
-      console.log(society.residents);
+    const society = await Society.findById(societyId);
 
     if (!society) {
       return res.status(404).json({ error: "Society not found" });
     }
 
     // Get all the complaints associated with the society
-     const issues = await Complaint.find({ society: societyId });
+    const issues = await Complaint.find({ society: societyId });
 
-    // Return the issues
-    res.status(200).json({ issues });
+    // Iterate through each complaint and fetch the username for the creator
+    const populatedIssues = await Promise.all(
+      issues.map(async (issue) => {
+        // Fetch the user document using userId stored in the complaint
+        const user = await Resident.findById(issue.resident);
+        // Create a new object with the complaint details along with the username
+        return {
+          _id: issue._id,
+          title: issue.title,
+          description: issue.description,
+          createdAt: issue.createdAt,
+          // Include username if user exists, otherwise use 'Unknown'
+          createdBy: user ? user.residentname : "Unknown",
+        };
+      })
+    );
+
+    // Return the populated issues with usernames
+    res.status(200).json({ issues: populatedIssues });
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Internal server error" });

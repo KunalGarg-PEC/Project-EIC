@@ -10,23 +10,23 @@ import {
   Card,
 } from "@/components/ui/card";
 
-export default function ComplaintCard() {
+export default function ComplaintCard({title,description,username,time}) {
   return (
     <Card>
       <CardHeader>
         <div className="flex items-center space-x-4">
           <div className="space-y-1">
-            <CardTitle className="text-sm">Wi-Fi connectivity issues</CardTitle>
-            <CardDescription>Intermittent connection problems.</CardDescription>
+            <CardTitle className="text-sm">{title}</CardTitle>
+            <CardDescription>{description}</CardDescription>
           </div>
           <div className="ml-auto flex items-center space-x-2">
             <div className="flex items-center space-x-1 text-sm">
               <UserIcon className="w-4 h-4" />
-              <span>ACM</span>
+              <span>{username}</span>
             </div>
             <div className="flex items-center space-x-1 text-sm">
               <ClockIcon className="w-4 h-4" />
-              <span>2h ago</span>
+              <span>{time}</span>
             </div>
           </div>
         </div>

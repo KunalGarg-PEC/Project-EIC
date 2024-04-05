@@ -50,6 +50,16 @@ const residentSchema = new Schema({
     type: Number,
     required: true,
   },
+  blockNumber:{
+  type: Number,
+  required: true,
+    
+  },
+  roomNumber:{
+    type: Number,
+    required: true
+    
+  },
     society: { type: Schema.Types.ObjectId, ref: "Society" }, 
     complaint:[{type:Schema.Types.ObjectId, ref:"Complaint"}]
 });

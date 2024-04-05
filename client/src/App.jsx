@@ -28,10 +28,10 @@ function App() {
       <Route path="/signup" element={<SignUp/>}></Route>
       <Route path="/signupasadmin" element={<SignUpAsAdmin/>}></Route>
       <Route path="/signupasresident" element={<SignUpAsResident />}></Route>
-      <Route path='/getIssues' element={<ComplaintCard/>} />
-
-      <Route path="/login" element={<LogIn/>}></Route>
-      <Route path="/loginasadmin" element={<LogInAsAdmin/>}></Route>
+        <Route path='/getIssues' element={<ComplaintCard />} />
+        <Route path="/login" element={<LogIn />}></Route>
+        <Route path='/loginasresident'  element={<LogInAsResident />}/>
+      <Route path="/loginasadmin" element={<LogInAsAdmin/>} />
   
     </Routes>  
     </ BrowserRouter >

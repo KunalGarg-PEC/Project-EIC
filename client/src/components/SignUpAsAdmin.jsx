@@ -38,8 +38,9 @@ export default function SignUpAsAdmin() {
       
       // Redirect to getIssues page on successful sign up
       const token = response.data.token;
-      const society_key = response.data.society_key;
-      localStorage.setItem("token",token)
+      const societykey = response.data.society_key;
+      localStorage.setItem("token", token)
+      localStorage.setItem("societyId",societykey);
       navigate("/getIssues");
       setIsLoading(false);
     } catch (error) {

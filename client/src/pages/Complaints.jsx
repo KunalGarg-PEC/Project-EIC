@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import ComplaintCard from "@/components/ComplaintCard";
 
 const ComplaintList = () => {
   const [complaints, setComplaints] = useState([]);
@@ -18,10 +19,8 @@ const ComplaintList = () => {
 
         const config = {
           headers: {
-            Authorization: token // Set Authorization header
-          },
-          params: {
-            societyId: societyId, // Set societyId as a query parameter
+                Authorization: token ,// Set Authorization header
+                societyId:societyId
           },
         };
 
@@ -38,18 +37,19 @@ const ComplaintList = () => {
     fetchData();
   }, []); // Empty dependency array to fetch data only once when the component mounts
 
-  return (
+    return (
+      
     <div>
-          <h2>Complaint List</h2>
-          <h1>hi</h1>
-      <ul>
-        {complaints.map((complaint) => (
-          <li key={complaint.id}>
-            <strong>Title:</strong> {complaint.title},{" "}
-            <strong>Description:</strong> {complaint.description}
-          </li>
-        ))}
-      </ul>
+      {complaints.map((complaint) => (
+        <div key={complaint._id}>
+          <ComplaintCard
+            title={complaint.title}
+            description={complaint.description}
+            username={complaint.createdBy}
+            time={complaint.createdAt}
+          />
+        </div>
+      ))}
     </div>
   );
 };

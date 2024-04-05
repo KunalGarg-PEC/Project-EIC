@@ -13,6 +13,8 @@ residentRouter.post("/signup", async (req, res) => {
   const email = body.email;
   const contactNumber = body.contactNumber;
   const societyId = body.societyid;
+  const roomNumber = body.roomNumber;
+  const blockNumber = body.blockNumber;
 
   const residentFound = await Resident.findOne({ email });
   if (residentFound) {
@@ -26,6 +28,8 @@ residentRouter.post("/signup", async (req, res) => {
       password: hashedPassword,
       email: email,
       contactNumber: contactNumber,
+      blockNumber: blockNumber,
+      roomNumber: roomNumber,
       society: societyId,
     });
 
