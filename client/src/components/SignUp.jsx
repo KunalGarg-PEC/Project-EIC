@@ -22,11 +22,7 @@ export default function SignUp() {
         <Button className="w-full" >Sign up as a resident</Button>
       </div>
     </div>
-    {
-        admin&& <signupforadmin />
-        resident && <signup
-
-    }
+    
     </>
   )
 }
