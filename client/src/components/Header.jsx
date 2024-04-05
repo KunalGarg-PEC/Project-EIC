@@ -7,7 +7,7 @@ export default function Header() {
       <header className="bg-white py-4">
         <div className="mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           <div className="flex items-center">
-            <button className="flex items-center">
+            <Link to='/' className="flex items-center">
               <img
                 alt="Logo"
                 className="h-10 w-10"
@@ -19,17 +19,22 @@ export default function Header() {
                 }}
                 width="40"
               />
-            </button>
+              <h1 className="font-bold text-sm sm:text-xl flex flex-wrap">
+              <span className="text-slate-500">Sankalp</span>
+              <span className="text-slate-700">Seva</span>
+            </h1>
+            </Link>
+
             <nav className="ml-10 flex space-x-4">
               <Link
                 to="/"
-                className="font-medium tracking-wide border-b-2 border-transparent hover:border-gray-900 focus:border-gray-900 dark:hover:border-gray-50 dark:focus:border-gray-50"
+                className="font-medium tracking-wide border-b-2 border-transparent hover:border-gray-900 focus:border-gray-900 dark:hover:border-gray-50 dark:focus:border-gray-50 pl-60"
               >
                 Home
               </Link>
               <Link
                 to="/about"
-                className="font-medium tracking-wide border-b-2 border-transparent hover:border-gray-900 focus:border-gray-900 dark:hover:border-gray-50 dark:focus:border-gray-50"
+                className="font-medium tracking-wide border-b-2 border-transparent hover:border-gray-900 focus:border-gray-900 dark:hover:border-gray-50 dark:focus:border-gray-50 pr-20 pl-20"
               >
                 About Us
               </Link>
@@ -40,10 +45,7 @@ export default function Header() {
                 Contact Us
               </Link>
             </nav>
-            <h1 className="font-bold text-sm sm:text-xl flex flex-wrap">
-              <span className="text-slate-500">Sankalp</span>
-              <span className="text-slate-700">Seva</span>
-            </h1>
+            
           </div>
           <div className="flex space-x-4">
             <Link

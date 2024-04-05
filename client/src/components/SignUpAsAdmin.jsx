@@ -50,13 +50,16 @@ export default function SignUpAsAdmin() {
   };
 
   return (
-    <div className="mx-auto max-w-3xl space-y-8">
-      <div className="space-y-2">
-        <h1 className="text-3xl font-bold">Join the Society</h1>
-        <p className="text-gray-500 dark:text-gray-400">
-          Enter your information to become a member
-        </p>
-      </div>
+    <div className="mx-auto max-w-3xl ">
+     <div className="flex flex-col justify-center items-center h-screen">
+  <div className=" text-center">
+    <h1 className="text-3xl font-bold">Join the Society</h1>
+    <p className="text-gray-500 dark:text-gray-400">
+      Enter your information to become a member
+    </p>
+  </div>
+</div>
+
       <div className="space-y-4">
         <div className="space-y-2">
           <Label htmlFor="full-name">Full name</Label>

@@ -21,18 +21,20 @@ export default function LogIn() {
     }
     
   return (
-    
+      
     <>
-    <div className="w-full space-y-4">
-      <div className="space-y-2 text-center">
-        <h1 className="text-3xl font-bold">Create an account</h1>
-        <p className="text-gray-500 dark:text-gray-400">Enter your account details to login</p>
-      </div>
-      <div className="grid max-w-sm mx-auto space-y-2">
-        <Button  className="w-full" onClick={logadminClick}  >Log In as an admin</Button>
-        <Button className="w-full" onClick={logresiClick} >Log In as a resident</Button>
-      </div>
+   <div className="flex flex-col items-center justify-center h-screen">
+  <div className="w-full space-y-4">
+    <div className="space-y-2 text-center">
+      <h1 className="text-3xl font-bold">Login</h1>
+      <p className="text-gray-500 dark:text-gray-400">Enter your account details to login</p>
     </div>
+    <div className="grid max-w-sm mx-auto space-y-2">
+      <Button  className="w-full" onClick={logadminClick}>Log In as an admin</Button>
+      <Button className="w-full" onClick={logresiClick}>Log In as a resident</Button>
+    </div>
+  </div>
+</div>
 
     
     {

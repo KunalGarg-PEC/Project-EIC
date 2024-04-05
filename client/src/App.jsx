@@ -18,7 +18,7 @@ import LogInAsResident from './components/LogInAsResident'
 
 import About from './components/About'
 import Contact from './components/Contact'
-import ComplaintForm from './components/ComplaintForm'
+import ComplaintForm from './pages/ComplaintForm'
 
 import Footer from './components/Footer'
 
