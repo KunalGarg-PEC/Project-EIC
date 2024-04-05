@@ -44,7 +44,7 @@ export default function SignUpAsResident() {
               <Label htmlFor="id">Unique ID</Label>
               <Input id="id" placeholder="Enter your unique ID" required />
             </div>
-            <Button className="w-full">Submit</Button>
+            <Button className="w-20">Submit</Button>
           </div>
         </div>
       </div>

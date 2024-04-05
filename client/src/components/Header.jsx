@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 export default function Header() {
   return (
-    <div className="flex flex-col">
-      <header className="bg-white py-4">
+    <div className="flex flex-col ">
+      <header className="bg-slate-100 py-4 ">
         <div className="mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           <div className="flex items-center">
             <Link to='/' className="flex items-center">
