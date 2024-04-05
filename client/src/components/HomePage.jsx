@@ -63,7 +63,7 @@ export default function HomePage() {
                   aspectRatio: "80/40",
                   objectFit: "cover",
                 }}
-                // width="40"
+                width="40"
               />
             </button>
           </div>
