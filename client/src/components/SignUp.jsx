@@ -5,10 +5,20 @@
  */
 import { Button } from "@/components/ui/button"
 import { useState } from "react"
+import SignUpAsAdmin from "./SignUpAsAdmin";
+import SignUpAsResident from "./SignUpAsResident";
 
 export default function SignUp() {
-    const [admin,setAdmin] = useState(false)
-    const [resident,setResident] = useState(false)
+    const [admin,setAdmin]=useState(false);
+    const adminClick= () => {
+        setAdmin(true);
+    }
+    const [resi,setResi]=useState(false);
+    const resiClick=() => {
+        setResi(true);
+        setAdmin(false);
+    }
+    
   return (
     
     <>
@@ -18,16 +28,21 @@ export default function SignUp() {
         <p className="text-gray-500 dark:text-gray-400">Enter your information to get started</p>
       </div>
       <div className="grid max-w-sm mx-auto space-y-2">
-        <Button className="w-full" onClick = {setAdmin(true)} >Sign up as an admin</Button>
-        <Button className="w-full" >Sign up as a resident</Button>
+        <Button  className="w-full" onClick={adminClick}  >Sign up as an admin</Button>
+        <Button className="w-full" onClick={resiClick} >Sign up as a resident</Button>
       </div>
     </div>
     {
-        admin&& <signupforadmin />
-        resident && <signup
-
+        admin&& <SignUpAsAdmin/>
+        
+    
+    }
+    {
+        resi&& <SignUpAsResident/>
     }
     </>
+    
+    
   )
 }
 
