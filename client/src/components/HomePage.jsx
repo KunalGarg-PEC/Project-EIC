@@ -20,11 +20,7 @@ export default function HomePage() {
                 </h1></div><div class="flex flex-col items-start space-y-4" data-id="17"><p class="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400" data-id="18">
                   Beautifully designed components that you can copy and paste
                   into your apps. Accessible. Customizable. Open Source.
-                </p><div class="space-x-4" data-id="19"><a class="inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300" data-id="20" href="#" rel="ugc">
-                    Get Started
-                  </a><a class="inline-flex h-9 items-center justify-center rounded-md border border-gray-200 border-gray-200 bg-white px-4 py-2 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:border-gray-800 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300" data-id="21" href="#" rel="ugc">
-                    Button
-                  </a></div></div></div></div>
+                </p></div></div></div>
         </section >
 
         <section className=" mt-3 relative h-[300px] bg-gray-200 dark:bg-gray-800">
