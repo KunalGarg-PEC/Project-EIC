@@ -10,7 +10,7 @@ import {
   Card,
 } from "@/components/ui/card";
 
-export default function Component() {
+export default function ComplaintCard() {
   return (
     <Card>
       <CardHeader>

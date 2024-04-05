@@ -40,7 +40,8 @@ const ComplaintList = () => {
 
   return (
     <div>
-      <h2>Complaint List</h2>
+          <h2>Complaint List</h2>
+          <h1>hi</h1>
       <ul>
         {complaints.map((complaint) => (
           <li key={complaint.id}>

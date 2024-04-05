@@ -50,6 +50,7 @@ export default function SignUpAsAdmin() {
   };
 
   return (
+    
     <div className="mx-auto max-w-3xl space-y-8">
       <div className="space-y-2">
         <h1 className="text-3xl font-bold">Join the Society</h1>
@@ -119,6 +120,9 @@ export default function SignUpAsAdmin() {
         <Button onClick={handleSignUp}>
           {isLoading ? <ImSpinner10 /> : "Sign-Up"}
         </Button>
+      </div>
+      <div>
+        hi
       </div>
     </div>
   );

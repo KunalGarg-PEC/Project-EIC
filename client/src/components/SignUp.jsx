@@ -11,15 +11,15 @@ import SignUpAsResident from "./SignUpAsResident";
 export default function SignUp() {
   const [admin, setAdmin] = useState(false);
   const [resi, setResi] = useState(false);
-    const adminClick= () => {
-      setAdmin(true);
-      setResi(false)
-    }
+  const adminClick = () => {
+    setAdmin(true);
+    setResi(false)
+  }
     
-    const resiClick=() => {
-        setResi(true);
-        setAdmin(false);
-    }
+  const resiClick = () => {
+    setResi(true);
+    setAdmin(false);
+  }
     
   return (
     <>
@@ -43,29 +43,12 @@ export default function SignUp() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
+
 
       {admin && <SignUpAsAdmin />}
       {resi && <SignUpAsResident />}
     </>
-  );
-=======
-      <div className="grid max-w-sm mx-auto space-y-2">
-        <Button  className="w-full" onClick={adminClick}  >Sign up as an Admin</Button>
-        <Button className="w-full" onClick={resiClick} >Sign up as a Resident</Button>
-      </div>
-    </div>
-    
-    {
-        admin&& <SignUpAsAdmin/>
-        
-    }
-
-    {
-        resi&& <SignUpAsResident/>
-    }
-    </>
   )
->>>>>>> refs/remotes/origin/main
-}
+};
+
 
