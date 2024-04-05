@@ -21,6 +21,7 @@ import Contact from './components/Contact'
 import ComplaintForm from './pages/ComplaintForm'
 
 import Footer from './components/Footer'
+import AfterLogInPage from './components/AfterLogInPage'
 
 
 
@@ -43,6 +44,7 @@ function App() {
       <Route path="/loginasresident" element={<LogInAsResident/>}></Route>
       <Route path ="/about" element={< About/>}></Route>
       <Route path ="/contact" element={<Contact/>}></Route>
+      <Route path="/afterloginpage" element={<AfterLogInPage/>}></Route>
       
       
 

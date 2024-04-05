@@ -13,6 +13,7 @@ export default function LogIn() {
     const [logadmin,setLogAdmin]=useState(false);
     const logadminClick= () => {
         setLogAdmin(true);
+        setLogResi(false);
     }
     const [logresi,setLogResi]=useState(false);
     const logresiClick=() => {
@@ -23,7 +24,7 @@ export default function LogIn() {
   return (
       
     <>
-   <div className="flex flex-col items-center justify-center h-screen">
+   <div className="flex flex-col items-center justify-center mb-10">
   <div className="w-full space-y-4">
     <div className="space-y-2 text-center">
       <h1 className="text-3xl font-bold">Login</h1>

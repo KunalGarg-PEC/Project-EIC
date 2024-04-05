@@ -14,7 +14,7 @@ export default function LogInAsResident() {
     <Card>
       <CardHeader className="space-y-2">
         <CardTitle className="text-2xl">Login</CardTitle>
-        <CardDescription>Enter your email below to login to your account.</CardDescription>
+        <CardDescription>Enter your account details below to login your account.</CardDescription>
       </CardHeader>
       <CardContent className="space-y-4">
         <div className="space-y-2">

@@ -28,19 +28,19 @@ export default function Header() {
             <nav className="ml-10 flex space-x-4">
               <Link
                 to="/"
-                className="font-medium tracking-wide border-b-2 border-transparent hover:border-gray-900 focus:border-gray-900 dark:hover:border-gray-50 dark:focus:border-gray-50 pl-60"
+                className="font-medium tracking-wide text-decoration-line: hover:underline  border-transparent hover:border-gray-900 focus:border-gray-900 dark:hover:border-gray-50 dark:focus:border-gray-50 pl-60"
               >
                 Home
               </Link>
               <Link
                 to="/about"
-                className="font-medium tracking-wide border-b-2 border-transparent hover:border-gray-900 focus:border-gray-900 dark:hover:border-gray-50 dark:focus:border-gray-50 pr-20 pl-20"
+                className="font-medium tracking-wide  border-transparent hover:underline hover:border-gray-900 focus:border-gray-900 dark:hover:border-gray-50 dark:focus:border-gray-50 pr-20 pl-20"
               >
                 About Us
               </Link>
               <Link
                 to="/contact"
-                className="font-medium tracking-wide border-b-2 border-transparent hover:border-gray-900 focus:border-gray-900 dark:hover:border-gray-50 dark:focus:border-gray-50"
+                className="font-medium tracking-wide text-hover border-transparent hover:underline hover:border-gray-900 focus:border-gray-900 dark:hover:border-gray-50 dark:focus:border-gray-50"
               >
                 Contact Us
               </Link>

@@ -23,7 +23,7 @@ export default function SignUp() {
     
   return (
     <>
-      <div className="flex flex-col justify-center h-screen">
+      <div className="flex flex-col justify-center mb-10 ">
         <div className="flex justify-center">
           <div className="w-full space-y-4">
             <div className="space-y-2 text-center">
