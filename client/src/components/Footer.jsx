@@ -9,9 +9,9 @@ import { Link } from 'react-router-dom'
 
 export default function Footer() {
   return (
-    <footer className="w-full py-6">
-      <div className="container flex items-center justify-between px-4 md:px-6">
-        <div className="flex items-center space-x-4">
+    <footer className="w-full py-6 mt-10">
+      <div className="container flex items-center justify-between px-4 md:px-6 mt-10">
+        <div className="flex items-center space-x-4 mt-10">
           <img
             alt="Logo"
             className="rounded-full"
@@ -23,8 +23,8 @@ export default function Footer() {
             }}
             width="72"
           />
-          <p className="text-xs text-gray-500 sm:text-sm dark:text-gray-400">
-            © 2023 SankalpSeva Ltd.  All rights reserved.
+          <p className="text-xs text-gray-500 sm:text-sm dark:text-gray-400 bg-slate-300" >
+            © 2024 SankalpSeva Ltd.  All rights reserved.
           </p>
         </div>
         <div className="flex items-center space-x-4">

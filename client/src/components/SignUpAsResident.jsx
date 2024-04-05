@@ -12,8 +12,8 @@ const SignUpAsResident = () => {
     email: "",
     password: "",
     blockNumber: "",
-    roomNumber:"",
-    societyidid: "",
+    roomNumber: "",
+    societyid: "", // Changed from societyidid
   });
 
   const navigate = useNavigate();

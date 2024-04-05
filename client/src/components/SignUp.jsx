@@ -27,7 +27,7 @@ export default function SignUp() {
         <div className="flex justify-center">
           <div className="w-full space-y-4">
             <div className="space-y-2 text-center">
-              <h1 className="text-3xl font-bold">Create an account</h1>
+              <h1 className="text-3xl font-bold mt-10">Create an account</h1>
               <p className="text-gray-500 dark:text-gray-400">
                 Enter your information to get started
               </p>
