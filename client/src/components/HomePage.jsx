@@ -14,7 +14,16 @@ export default function HomePage() {
     <div className="flex flex-col min-h-screen">
       
       <main className="flex-grow">
-        <section className="relative h-[300px] bg-gray-200 dark:bg-gray-800">
+
+      <section class="w-full pt-12 md:pt-24 lg:pt-32 border-y" data-id="12"><div class="px-4 md:px-6 space-y-10 xl:space-y-16" data-id="13"><div class="grid max-w-[1300px] mx-auto gap-4 px-4 sm:px-6 md:px-10 md:grid-cols-2 md:gap-16" data-id="14"><div data-id="15"><h1 class="lg:leading-tighter text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem]" data-id="16">
+                  The complete platform for your solutions.
+                </h1></div><div class="flex flex-col items-start space-y-4" data-id="17"><p class="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400" data-id="18">
+                  Beautifully designed components that you can copy and paste
+                  into your apps. Accessible. Customizable. Open Source.
+                </p></div></div></div>
+        </section >
+
+        <section className=" mt-3 relative h-[300px] bg-gray-200 dark:bg-gray-800">
           <img
             alt="Background"
             className="absolute inset-0 object-cover"
@@ -47,7 +56,6 @@ export default function HomePage() {
           </section>
 
           
-
       </main>
 
       <footer className="bg-gray-100 py-6">
@@ -63,7 +71,7 @@ export default function HomePage() {
                   aspectRatio: "80/40",
                   objectFit: "cover",
                 }}
-                // width="40"
+                width="40"
               />
             </button>
           </div>
@@ -75,6 +83,7 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
+
     </div>
   )
 }
