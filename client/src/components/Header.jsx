@@ -21,8 +21,31 @@ export default function Header() {
                 width="40"
               />
             </button>
-            <nav className="ml-10 flex space-x-4">
+            <nav className="ml-10 flex space-x-4 text-align: center  justify-center pr-50">
+             <div className=" pr-5">
+             <Link to='/'
+              className="font-medium tracking-wide border-b-2 border-transparent hover:border-gray-900 focus:border-gray-900 dark:hover:border-gray-50 dark:focus:border-gray-50 pl-80"
+              href="#"
+            >
+              Home
+            </Link>
+
+            <Link/>
+            <Link to='/About'
+              className="font-medium tracking-wide border-b-2 border-transparent hover:border-gray-900 focus:border-gray-900 dark:hover:border-gray-50 dark:focus:border-gray-50 pr-20 pl-20"
+              href="#"
+            >
+              About Us
+            </Link>
+            <Link to="/contact"
+              className="font-medium tracking-wide border-b-2 border-transparent hover:border-gray-900 focus:border-gray-900 dark:hover:border-gray-50 dark:focus:border-gray-50"
+              href="#"
+            >
+              Contact Us
+            </Link>
               
+             </div>
+           
             </nav>
           </div>
           <div className="flex space-x-4">

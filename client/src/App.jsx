@@ -12,6 +12,9 @@ import SignUpAsResident from './components/SignUpAsResident'
 import  LogIn from './components/LogIn'
 import LogInAsAdmin from './components/LogInAsAdmin'
 import LogInAsResident from './components/LogInAsResident'
+import About from './components/About'
+import Contact from './components/Contact'
+import ComplaintForm from './components/ComplaintForm'
 
 function App() {
   
@@ -28,6 +31,8 @@ function App() {
       <Route path="/login" element={<LogIn/>}></Route>
       <Route path="/loginasadmin" element={<LogInAsAdmin/>}></Route>
       <Route path="/signupasresident" element={<LogInAsResident/>}></Route>
+      <Route path ="/about" element={< About/>}></Route>
+      <Route path ="/contact" element={<Contact/>}></Route>
       
     </Routes>  
     </ BrowserRouter >
