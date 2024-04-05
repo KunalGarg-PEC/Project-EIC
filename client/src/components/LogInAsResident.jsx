@@ -1,9 +1,16 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import { useNavigate } from "react-router-dom";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from "@/components/ui/card";
 
 const LogInAsResident = () => {
   const navigate = useNavigate();
@@ -31,7 +38,7 @@ const LogInAsResident = () => {
       // Redirect to the desired page after successful login
       // For example:
       // history.push('/dashboard');
-      navigate('/dashboard')
+      navigate("/dashboard");
     } catch (error) {
       console.error("Error logging in:", error);
       // Handle error (e.g., display error message to the user)
@@ -39,16 +46,16 @@ const LogInAsResident = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div className="px-4 py-12 sm:px-6 lg:px-8">
-        <div className="mx-auto prose lg:prose-xl">
-          <div className="space-y-8">
-            <div className="space-y-2">
-              <h1 className="text-3xl font-bold">Login</h1>
-              <p className="text-gray-500 dark:text-gray-400">
-                Enter your email and password to login to your account.
-              </p>
-            </div>
+    <div className="px-4 py-12 sm:px-6 lg:px-8">
+      <div className="mx-auto prose lg:prose-xl">
+        <div className="space-y-8">
+          <div className="space-y-2">
+            <h1 className="text-3xl font-bold">Login</h1>
+            <p className="text-gray-500 dark:text-gray-400">
+              Enter your email and password to login to your account.
+            </p>
+          </div>
+          <form onSubmit={handleSubmit}>
             <div className="space-y-4">
               <div className="space-y-2">
                 <Label htmlFor="email">Email</Label>
@@ -74,10 +81,10 @@ const LogInAsResident = () => {
                 Submit
               </Button>
             </div>
-          </div>
+          </form>
         </div>
       </div>
-    </form>
+    </div>
   );
 };
 

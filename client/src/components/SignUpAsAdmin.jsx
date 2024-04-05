@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
@@ -6,7 +6,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { ImSpinner10 } from "react-icons/im";
-
 
 export default function SignUpAsAdmin() {
   const navigate = useNavigate();
@@ -26,7 +25,7 @@ export default function SignUpAsAdmin() {
       [e.target.id]: e.target.value,
     });
   };
-
+  
   const handleSignUp = async () => {
     try {
       setIsLoading(true);
@@ -34,24 +33,22 @@ export default function SignUpAsAdmin() {
         "http://localhost:3000/api/v1/user/owner/signup",
         formData
       );
-      console.log("Sign up successful:", response.data);
-      
-      // Redirect to getIssues page on successful sign up
-      const token = response.data.token;
-      const societykey = response.data.society_key;
-      localStorage.setItem("token", token)
-      localStorage.setItem("societyId",societykey);
+      const { token, society_key } = response.data;
+
+      // Store JWT token and society key in localStorage
+      localStorage.setItem("token", token);
+      localStorage.setItem("societyId", society_key);
+
       navigate("/getIssues");
-      setIsLoading(false);
     } catch (error) {
       console.error("Sign up failed:", error);
-      setIsLoading(false);
       // Handle error, show an error message
+    } finally {
+      setIsLoading(false);
     }
   };
 
   return (
-    
     <div className="mx-auto max-w-3xl space-y-8">
       <div className="space-y-2">
         <h1 className="text-3xl font-bold">Join the Society</h1>
@@ -61,7 +58,7 @@ export default function SignUpAsAdmin() {
       </div>
       <div className="space-y-4">
         <div className="space-y-2">
-          <Label htmlFor="full-name">Full name</Label>
+          <Label htmlFor="username">Full name</Label>
           <Input
             id="username"
             placeholder="Enter your full name"
@@ -90,7 +87,7 @@ export default function SignUpAsAdmin() {
           />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="phone">Phone number</Label>
+          <Label htmlFor="contactNumber">Phone number</Label>
           <Input
             id="contactNumber"
             placeholder="Enter your phone number"
@@ -100,7 +97,7 @@ export default function SignUpAsAdmin() {
           />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="society">Society name</Label>
+          <Label htmlFor="societyname">Society name</Label>
           <Input
             id="societyname"
             placeholder="Enter your society name"
@@ -109,7 +106,7 @@ export default function SignUpAsAdmin() {
           />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="address">Address</Label>
+          <Label htmlFor="societyaddress">Address</Label>
           <Textarea
             className="min-h-[100px]"
             id="societyaddress"
@@ -119,11 +116,8 @@ export default function SignUpAsAdmin() {
           />
         </div>
         <Button onClick={handleSignUp}>
-          {isLoading ? <ImSpinner10 /> : "Sign-Up"}
+          {isLoading ? <ImSpinner10 className="animate-spin" /> : "Sign-Up"}
         </Button>
-      </div>
-      <div>
-        hi
       </div>
     </div>
   );
