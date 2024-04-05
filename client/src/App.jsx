@@ -12,6 +12,7 @@ import SignUpAsResident from './components/SignUpAsResident'
 import  LogIn from './components/LogIn'
 import LogInAsAdmin from './components/LogInAsAdmin'
 import LogInAsResident from './components/LogInAsResident'
+import Footer from './components/Footer'
 
 function App() {
   
@@ -23,13 +24,14 @@ function App() {
     <Routes>
       <Route path ="/" element={<HomePage/>}></Route>
       <Route path="/signup" element={<SignUp/>}></Route>
-      <Route path="/signupasadmin" element={<SignUpAsAdmin/>}></Route>
+      <Route path="/signupasadmin" element={<SignUp AsAdmin/>}></Route>
       <Route path="/signupasresident" element={<SignUpAsResident/>}></Route>
       <Route path="/login" element={<LogIn/>}></Route>
       <Route path="/loginasadmin" element={<LogInAsAdmin/>}></Route>
       <Route path="/signupasresident" element={<LogInAsResident/>}></Route>
       
-    </Routes>  
+    </Routes> 
+    <Footer /> 
     </ BrowserRouter >
   )
 }
