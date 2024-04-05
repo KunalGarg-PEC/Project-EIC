@@ -26,6 +26,10 @@ export default function SignUpAsAdmin() {
           <Input id="email" placeholder="Enter your email" required type="email" />
         </div>
         <div className="space-y-2">
+          <Label htmlFor="password">Password</Label>
+          <Input id="password" placeholder="Enter your password" required type="password" />
+        </div>
+        <div className="space-y-2">
           <Label htmlFor="phone">Phone number</Label>
           <Input id="phone" placeholder="Enter your phone number" required type="tel" />
         </div>

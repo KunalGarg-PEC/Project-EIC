@@ -14,7 +14,7 @@ export default function SignUpAsResident() {
       <div className="mx-auto prose lg:prose-xl">
         <div className="space-y-8">
           <div className="space-y-2">
-            <h1 className="text-3xl font-bold">Register for Visitor's Pass</h1>
+            <h1 className="text-3xl font-bold">Register for Resident's Pass</h1>
             <p className="text-gray-500 dark:text-gray-400">Enter your information to register for a visitor's pass</p>
           </div>
           <div className="space-y-4">
@@ -27,6 +27,14 @@ export default function SignUpAsResident() {
                 <Label htmlFor="phone">Phone number</Label>
                 <Input id="phone" placeholder="Enter your phone number" required />
               </div>
+            </div>
+            <div className="space-y-2">
+                <Label htmlFor="email">Email</Label>
+                <Input id="email" placeholder="Enter your email" required type="email" />
+            </div>
+            <div className="space-y-2">
+                <Label htmlFor="password">Password</Label>
+                <Input id="password" placeholder="Enter your password" required type="password" />
             </div>
             <div className="space-y-2">
               <Label htmlFor="block">Block/Wing</Label>
