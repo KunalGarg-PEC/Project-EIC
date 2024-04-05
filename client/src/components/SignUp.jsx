@@ -32,6 +32,8 @@ export default function SignUp() {
         <Button className="w-full" onClick={resiClick} >Sign up as a resident</Button>
       </div>
     </div>
+
+    
     {
         admin&& <SignUpAsAdmin/>
         
