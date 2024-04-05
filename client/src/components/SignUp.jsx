@@ -28,23 +28,20 @@ export default function SignUp() {
         <p className="text-gray-500 dark:text-gray-400">Enter your information to get started</p>
       </div>
       <div className="grid max-w-sm mx-auto space-y-2">
-        <Button  className="w-full" onClick={adminClick}  >Sign up as an admin</Button>
-        <Button className="w-full" onClick={resiClick} >Sign up as a resident</Button>
+        <Button  className="w-full" onClick={adminClick}  >Sign up as an Admin</Button>
+        <Button className="w-full" onClick={resiClick} >Sign up as a Resident</Button>
       </div>
     </div>
-
     
     {
         admin&& <SignUpAsAdmin/>
         
-    
     }
+
     {
         resi&& <SignUpAsResident/>
     }
     </>
-    
-    
   )
 }
 
