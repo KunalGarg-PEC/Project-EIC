@@ -5,8 +5,11 @@
  */
 
 import { Button } from "@/components/ui/button"
+import { useState } from "react"
+import { Link } from 'react-router-dom'
 
 export default function HomePage() {
+    
   return (
     <div className="flex flex-col min-h-screen">
       <header className="bg-white py-4">
@@ -15,14 +18,14 @@ export default function HomePage() {
             <button className="flex items-center">
               <img
                 alt="Logo"
-                className="h-100 w-100"
-                height="100"
-                src="https://static.vecteezy.com/system/resources/thumbnails/012/793/659/small/ss-initial-letter-gold-calligraphic-feminine-floral-hand-drawn-heraldic-monogram-antique-vintage-style-luxury-logo-design-premium-vector.jpg"
+                className="h-10 w-10"
+                height="40"
+                src="https://images.pexels.com/photos/1162361/pexels-photo-1162361.jpeg?auto=compress&cs=tinysrgb&w=600"
                 style={{
-                  aspectRatio: "100/100",
-                  objectFit: "contain",
+                  aspectRatio: "40/40",
+                  objectFit: "cover",
                 }}
-                width="100"
+                width="40"
               />
             </button>
             <nav className="ml-10 flex space-x-4">
@@ -39,8 +42,8 @@ export default function HomePage() {
           </div>
         </div>
       </header>
-      <main className="flex-grow w-full">
-        <section className="relative h-[300px] bg-gray-200 dark:bg-gray-1000 w-full">
+      <main className="flex-grow">
+        <section className="relative h-[300px] bg-gray-200 dark:bg-gray-800">
           <img
             alt="Background"
             className="absolute inset-0 object-cover"
