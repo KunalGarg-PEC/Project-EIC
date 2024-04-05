@@ -58,13 +58,6 @@ export default function HomePage() {
           
       </main>
 
-<<<<<<< HEAD
-
-      
-
-
-
-=======
       <footer className="bg-gray-100 py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
@@ -90,7 +83,7 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
->>>>>>> refs/remotes/origin/main
+
     </div>
   )
 }
