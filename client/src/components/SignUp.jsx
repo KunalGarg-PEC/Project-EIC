@@ -32,9 +32,8 @@ export default function SignUp() {
         <Button className="w-full" onClick={resiClick} >Sign up as a resident</Button>
       </div>
     </div>
-<<<<<<< HEAD
+
     
-=======
     {
         admin&& <SignUpAsAdmin/>
         
@@ -43,7 +42,6 @@ export default function SignUp() {
     {
         resi&& <SignUpAsResident/>
     }
->>>>>>> refs/remotes/origin/main
     </>
     
     
