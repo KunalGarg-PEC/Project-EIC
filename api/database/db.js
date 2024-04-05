@@ -1,9 +1,17 @@
+const { error } = require("console");
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+mongoose.connect(
+  "mongodb+srv://gargkunal369:IOsMig1TwzObgcv1@real-estate.mnk9qws.mongodb.net/"
+).then(() => {
+    console.log("Database connected")
+}).catch((error)=>{
+    console.log(error)
+});
 
 // Define schema for Owner
 const ownerSchema = new Schema({
-  username: {
+  ownername: {
     type: String,
     required: true,
   },
@@ -17,7 +25,7 @@ const ownerSchema = new Schema({
     required: true,
   },
   contactNumber: {
-    type: String,
+    type: Number,
     required: true,
   },
   society: { type: Schema.Types.ObjectId, ref: "Society", required: true },
@@ -25,7 +33,11 @@ const ownerSchema = new Schema({
 
 // Define schema for Resident
 const residentSchema = new Schema({
-  name: {
+  residentname: {
+    type: String,
+    required: true,
+    },
+      password: {
     type: String,
     required: true,
   },
@@ -35,23 +47,25 @@ const residentSchema = new Schema({
     unique: true,
   },
   contactNumber: {
-    type: String,
+    type: Number,
     required: true,
   },
-  society: { type: Schema.Types.ObjectId, ref: "Society" },
+    society: { type: Schema.Types.ObjectId, ref: "Society" }, 
+    complaint:[{type:Schema.Types.ObjectId, ref:"Complaint"}]
 });
 
 // Define schema for Society
 const societySchema = new Schema({
-  name: {
+  societyname: {
     type: String,
     required: true,
   },
   address: {
     type: String,
     required: true,
-  },
-  owners: [{ type: Schema.Types.ObjectId, ref: "Owner" }],
+    },
+  complaint:[{type:Schema.Types.ObjectId, ref:"Complaint"}],
+  owner: [{type:Schema.Types.ObjectId, ref:"Owner"}],
   residents: [{ type: Schema.Types.ObjectId, ref: "Resident" }],
 });
 
