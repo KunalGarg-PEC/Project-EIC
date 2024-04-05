@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 // Define schema for Owner
 const ownerSchema = new Schema({
-  name: {
+  username: {
     type: String,
     required: true,
   },
