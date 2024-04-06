@@ -19,11 +19,12 @@ export default function HomePage() {
     <div className="grid max-w-[1300px] mx-auto gap-4 px-4 sm:px-6 md:px-10 md:grid-cols-2 md:gap-16" data-id="14">
       <div data-id="15">
         <h1 className="lg:leading-tighter mt-11 text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-[3.4rem] 2xl:text-[3.75rem] text-center" data-id="16">
-          The complete platform for your solutions.
+          A  One  Stop  Solution  For  Maintenance Of Your Housing Society.
         </h1>
+        <h3 className="mt-10 text-2xl ml-10 font-bold flex flex-wrap">"Empowering Communities, One Click at a Time.</h3>
       </div>
       <div className="flex flex-col items-start space-y-4" data-id="17">
-        <img className="rounded-full w-50 h-50" src="https://images.pexels.com/photos/5691515/pexels-photo-5691515.jpeg?auto=compress&cs=tinysrgb&w=600" alt="img-desc" />
+        <img className="rounded-full w-50 h-50" src="https://www.chsone.in/blog/wp-content/uploads/2018/03/32068293.jpg" alt="img-desc" />
       </div>
     </div>
   </div>
@@ -31,24 +32,12 @@ export default function HomePage() {
 
 
 
-        <section className=" mt-3 relative h-[300px] bg-gray-200 dark:bg-gray-800">
-          <img
-            alt="Background"
-            className="absolute inset-0 object-cover"
-            height="300"
-            src="https://vintageproperty.in/wp-content/uploads/2018/09/project-prestige-shantiniketan-elevation-2-1060x795px.jpg"
-            style={{
-              aspectRatio: "1440/475",
-              objectFit: "cover",
-            }}
-            width="1440"
-          />
-        </section>
+        
  
-        <section class="w-full mt-20 py-12 md:py-24 lg:py-32" data-id="23"><div class="container grid items-center justify-center gap-4 px-4 text-center md:px-6" data-id="24"><div class="space-y-3" data-id="25"><h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl" data-id="26">
+        <section class="w-full mt-5 py-12 md:py-24 lg:py-32" data-id="23"><div class="container grid items-center justify-center gap-4 px-4 text-center md:px-6" data-id="24"><div class="space-y-3" data-id="25"><h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl" data-id="26">
                 Our Solutions
               </h2><p class="mx-auto max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400" data-id="27">
-                We provide innovative solutions to everyday problems. From
+                We provide Innovative solutions to everyday problems. From
                 home to healthcare, we've got you covered.
               </p></div><div class="mx-auto grid max-w-5xl items-center gap-6 sm:grid-cols-2 md:gap-12 lg:max-w-6xl lg:grid-cols-4" data-id="28"><div class="flex flex-col items-center space-y-2" data-id="29"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12" data-id="30"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg><h3 class="text-xl font-bold" data-id="31">Home Services</h3><p class="text-sm text-gray-500 dark:text-gray-400" data-id="32">
                   Make your home smarter and your life more convenient.
@@ -62,6 +51,22 @@ export default function HomePage() {
                   Empowering learning with technology for the next generation.
                 </p></div></div></div>
           </section>
+
+
+
+          <section className=" mt-3 relative h-[300px] bg-gray-200 dark:bg-gray-800">
+          <img
+            alt="Background"
+            className="absolute inset-0 object-cover"
+            height="300"
+            src="https://vintageproperty.in/wp-content/uploads/2018/09/project-prestige-shantiniketan-elevation-2-1060x795px.jpg"
+            style={{
+              aspectRatio: "1440/475",
+              objectFit: "cover",
+            }}
+            width="1440"
+          />
+        </section>
 
           
       </main>

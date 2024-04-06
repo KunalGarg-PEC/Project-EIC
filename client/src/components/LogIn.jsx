@@ -31,8 +31,8 @@ export default function LogIn() {
       <p className="text-gray-500 dark:text-gray-400">Enter your account details to login</p>
     </div>
     <div className="grid max-w-sm mx-auto space-y-2">
-      <Button  className="w-full" onClick={logadminClick}>Log In as an admin</Button>
-      <Button className="w-full" onClick={logresiClick}>Log In as a resident</Button>
+      <Button  className="w-full" onClick={logadminClick}>Log In as Secretary</Button>
+      <Button className="w-full" onClick={logresiClick}>Log In as a Resident</Button>
     </div>
   </div>
 </div>
