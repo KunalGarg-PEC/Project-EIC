@@ -17,9 +17,15 @@ import LogInAsAdmin from './components/LogInAsAdmin'
 import LogInAsResident from './components/LogInAsResident'
 import AfterLogInPage from './components/AfterLogInPage'
 import ComplaintForm from './pages/ComplaintForm'
+import Footer from './components/Footer'
 import ComplaintRender from './components/ComplaintRender'
+ 
 import About from './components/About'
 import Contact from './components/Contact'
+
+
+
+ 
 
 
 function App() {
@@ -45,6 +51,7 @@ function App() {
         <Route path='/compalintrender' element={<ComplaintRender/>}></Route>
         {/* <Route path='/resident/dashboard/:complaint' element={} /> */}
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
