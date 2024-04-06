@@ -17,6 +17,7 @@ import LogInAsAdmin from './components/LogInAsAdmin'
 import LogInAsResident from './components/LogInAsResident'
 import AfterLogInPage from './components/AfterLogInPage'
 import ComplaintForm from './pages/ComplaintForm'
+import ComplaintRender from './components/ComplaintRender'
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
         <Route path="/login/resident" element={<LogInAsResident />}></Route>
         <Route path='/resident/dashboard' element={<AfterLogInPage />} />
         <Route path='/resident/dashboard/complaint' element={<ComplaintForm />} />
+        <Route path='/compalintrender' element={<ComplaintRender/>}></Route>
         {/* <Route path='/resident/dashboard/:complaint' element={} /> */}
       </Routes>
     </BrowserRouter>
