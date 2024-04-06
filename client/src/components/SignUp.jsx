@@ -34,10 +34,10 @@ export default function SignUp() {
             </div>
             <div className="grid max-w-sm mx-auto space-y-2">
               <Button className="w-full" onClick={adminClick}>
-                Sign up as an admin
+                Sign up as an Admin
               </Button>
               <Button className="w-full" onClick={resiClick}>
-                Sign up as a resident
+                Sign up as a Resident
               </Button>
             </div>
           </div>
